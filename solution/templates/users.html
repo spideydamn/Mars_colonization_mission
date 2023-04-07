@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>The last colonists</h1>
+<div class="works_logs">
+{% for item in users%}
+<div class="works_log">
+    <h2>Action # {{item.id}}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Surname</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Speciality</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{item.surname}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.position}}</td>
+                <td>{{item.speciality}}</td>
+                <td>{{item.modified_date}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
